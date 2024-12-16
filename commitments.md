@@ -134,8 +134,11 @@
 
 ## Underskrift
 
+@Mikaela Kihl
+@Matilda Söderhäll
 @
 @
+@Sokol Hatija
 @Vy Petersson
 @
 @
