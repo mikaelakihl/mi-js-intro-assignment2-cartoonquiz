@@ -136,9 +136,5 @@
 
 @Mikaela Kihl
 @Matilda Söderhäll
-@
-@
-@Sokol Hatija
 @Vy Petersson
-@
-@
+@Sokol Hatija
