@@ -3,6 +3,10 @@ interface IQuestion {
   question: string;
   correctAnswer: string;
   incorrectAnswers: [string, string];
+  image?: {  // Optional field to store image data
+    src: string;
+    alt: string;
+  };
 }
 
 const questions: IQuestion[] = [
