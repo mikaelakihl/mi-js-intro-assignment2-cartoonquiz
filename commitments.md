@@ -95,7 +95,7 @@
 - Vilka regler ska vi ha i Prettier, ESLint och hur skriver vi i css/html/js? (citat/dubbelcitat) (camelCase/snake_case) osv
 
   HTML: dubbelcitat “”, id: camelCase, class: kebab-case
-  SASS: skrivs uppifrån och ner utifrån HTML-sidan
+  SASS: skrivs uppifrån och ner utifrån HTML-sidan, all namngivning kebab-case
   JS: enkelcitat ‘’, camelCase, id: camelCase, class: kebab-case
 
 ## Tidsplan
