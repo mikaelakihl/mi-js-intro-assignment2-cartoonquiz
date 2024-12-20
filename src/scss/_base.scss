@@ -7,7 +7,14 @@ body{
 
 .header{
     background-color: variables.$header-box-color;
-    
+}
+
+.header-h1{
+    font-family: variables.$secondary-font;
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
 }
 
 .hidden{
