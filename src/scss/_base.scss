@@ -1,7 +1,21 @@
+@use 'variables';
 
 body{
     background-color: #dbf26e;
     background-image: linear-gradient(319deg, #dbf26e 0%, #61fa74 37%, #1cfdd6 100%);
+}
+
+.header{
+    background-color: variables.$header-box-color;
+}
+
+.header-h1{
+    font-family: variables.$secondary-font;
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    text-shadow: rgba(38, 111, 48, 0.82) 5px 2px 5px;
 }
 
 .hidden{
