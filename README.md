@@ -1,7 +1,7 @@
 
-# Psuedokod
+# Pseudokod
 
-## Define a list at 20 questions 
+## Define a list of 20 questions 
 > Create questions file
 > Create interface for question
 > create array of questions 
@@ -21,36 +21,35 @@
 > Start timer (call on function starting timer)
 > Display first question calls on function (display question) 
 > Remove class hidden from question box
-> Hide play button 
+> Hide play button
 
-## Function: Call on function starting timer
+## Function: Start timer
 > Start timer (set time out?)
 > Display timer in div 'time'
 
-## Function: Display questions 
+## Function: Display question
 > Parameter active question 
-> Display active question (inneherHTML)
-> Display option of questions (radiobutton, buttons?)
-
+> Display active question (innerHTML)
+> Display option of questions (radiobutton, button?)
 
 ## Function: Handle answer 
-> Check if the answer is correft
+> Check if the answer is correct
 > If the selected answer is correct, increment the score and display green color 
-> Else dispaly red color
-> Check if last question
-> call on function Display questions
-> Else call on function: End quiz
+> Else display red color
+> Set timeout for 3 seconds before moving on
+> Check if it's the last question
+> If not, call function: Display question
+> If last question, call on function: End quiz
 
 ## Function: End quiz 
 > Call on function: Stop timer
 > Display result box with correct answers, total time, score + restartbutton
 > Hide quiz/answer box
+> Restart - Call on function: Start Quiz
 
 ## Function: Stop timer
-> Stop timer 
+> Save time (in a variable)
 
-## Function: Restart Quiz
-> Call on function: Start Quiz
 
 
 
