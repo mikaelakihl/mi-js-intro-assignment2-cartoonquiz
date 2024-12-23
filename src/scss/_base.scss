@@ -18,6 +18,20 @@ body{
     text-shadow: rgba(38, 111, 48, 0.82) 5px 2px 5px;
 }
 
+.play-game-btn-container{
+    background-color: red;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .play-game-btn{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 .hidden{
     display: none;
 
