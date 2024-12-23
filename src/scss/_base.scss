@@ -32,6 +32,13 @@ body{
         justify-content: center;
         width: 40vw;
         height: 30vw;
+        background-color: transparent;
+        border: black solid;
+
+        .play-game-btn-icon{
+            height: 100px;
+            width: 100px;
+        }
     }
 }
 
