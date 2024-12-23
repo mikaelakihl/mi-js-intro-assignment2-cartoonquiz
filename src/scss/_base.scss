@@ -4,6 +4,7 @@ body{
     background-color: #dbf26e;
     background-image: linear-gradient(319deg, #dbf26e 0%, #61fa74 37%, #1cfdd6 100%);
     font-family: variables.$primary-font;
+    font-size: variables.$small-font-size;
 }
 
 .header{
@@ -20,7 +21,6 @@ body{
 }
 
 .play-game-btn-container{
-    background-color: red;
     position: relative;
     display: flex;
     flex-direction: column;

@@ -1,9 +1,27 @@
+@use 'variables';
+
 @media screen and (min-width: 768px){
+
+    
     
     .header-h1{
         font-size: 4rem;
         
     }
+
+    .play-game-btn-container{
+    
+        .play-game-btn{
+            font-size: variables.$medium-font-size;
+            
+            .play-game-btn-icon{
+                height: 200px;
+                width: 200px;
+            }
+        }
+    }
+
+    
 
 }
 
