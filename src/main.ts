@@ -12,3 +12,16 @@ import questions from './modules/questions';
 
 // temporary solution to error for not using variable
 console.log(questions);
+
+
+
+// -----------------------------------------------------------------------------
+// --------------------------------- START GAME --------------------------------
+// -----------------------------------------------------------------------------
+
+function startGame() {
+    currentScore = 0;
+    currentTimeInTimer = 0;
+}
+
+startGame();
