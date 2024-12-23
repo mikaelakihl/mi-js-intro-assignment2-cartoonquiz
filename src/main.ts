@@ -13,6 +13,7 @@ playGameBtn!.addEventListener('click', playGame);
 console.log(playGameBtn);
 
 function playGame(){
+    alert('knappen klickas');
     
 }
 
