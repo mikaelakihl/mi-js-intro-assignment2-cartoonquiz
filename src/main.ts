@@ -19,9 +19,18 @@ console.log(questions);
 // --------------------------------- START GAME --------------------------------
 // -----------------------------------------------------------------------------
 
-function startGame() {
+const playGameBtnContainer = document.querySelector('#playGameBtnContainer');
+const questionContainer = document.querySelector('section');
+
+function playGame() {
     currentScore = 0;
     currentTimeInTimer = 0;
+
+    playGameBtnContainer!.classList.toggle('hidden');
+    questionContainer!.classList.toggle('hidden');
+
+    //call on function displayQuestion()
+    //call on function startTimer()
 }
 
-startGame();
+playGame();
