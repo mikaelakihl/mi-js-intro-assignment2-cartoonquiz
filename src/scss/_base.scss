@@ -10,6 +10,10 @@ body{
 
 .header{
     background-color: variables.$header-box-color;
+
+    h1:hover{
+        background-color: variables.$hover-color;
+    }
 }
 
 .header-h1{
@@ -19,6 +23,7 @@ body{
     text-transform: uppercase;
     letter-spacing: 0.5rem;
     text-shadow: rgba(38, 111, 48, 0.82) 5px 2px 5px;
+
 }
 
 .play-game-btn-container{
