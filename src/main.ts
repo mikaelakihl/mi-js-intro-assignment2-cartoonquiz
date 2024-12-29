@@ -7,6 +7,7 @@ import questions from './modules/questions';
 // -----------------------------------------------------------------------------
 
 const playGameBtn  = document.querySelector('#playGameBtn');
+const logoInHeader = document.querySelector('#logoInHeader');
 
 playGameBtn!.addEventListener('click', playGame);
 
