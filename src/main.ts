@@ -10,9 +10,11 @@ const playGameBtn  = document.querySelector('#playGameBtn');
 const logoInHeader = document.querySelector('#logoInHeader');
 // const homePage = document.querySelector('#homePage');
 
-playGameBtn!.addEventListener('click', playGame);
+// -----------------------------------------------------------------------------
+// --------------------------------- PLAY GAME ---------------------------------
+// -----------------------------------------------------------------------------
 
-console.log(playGameBtn);
+playGameBtn!.addEventListener('click', playGame);
 
 function playGame(){
     alert('knappen klickas');
@@ -24,6 +26,22 @@ logoInHeader!.addEventListener('click', goBackToStartPage);
 function goBackToStartPage(){
     window.location.href = '/';
 }
+
+// -----------------------------------------------------------------------------
+// --------------------------------- HANDLE ANSWER -----------------------------
+// -----------------------------------------------------------------------------
+
+function handleAnswer(){
+    if (selectedValue === correctAnswer){
+        correctAnswer.classlist.add('correct-color');
+    } 
+    if (selectedValue === incorrectAnswers){
+        incorrectAnswers.classlist.add('incorrect-color');
+    }
+
+}
+
+console.log(handleAnswer);
 
 // prepared variables for future use, they are currently commented out until they are used
 // let currentScore = 0; 
