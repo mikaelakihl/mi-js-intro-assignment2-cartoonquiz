@@ -44,7 +44,6 @@ let currentRound = 1;
 
 function playGame() {
     // currentScore = 0;
-    // currentTimeInTimer = 0;
     console.log(currentRound);
 
     //select first 10 or last 10 questions
@@ -62,6 +61,6 @@ function playGame() {
     questionContainer!.classList.toggle('hidden');
 
     //call on function displayQuestion()
-    //startTimer()
+    startTimer()
     console.log('playGame function run');
 }
