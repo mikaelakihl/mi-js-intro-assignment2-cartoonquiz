@@ -31,15 +31,25 @@ function goBackToStartPage(){
 // --------------------------------- HANDLE ANSWER -----------------------------
 // -----------------------------------------------------------------------------
 
-function handleAnswer(){
-    if (selectedValue === correctAnswer){
-        correctAnswer.classlist.add('correct-color');
-    } 
-    if (selectedValue === incorrectAnswers){
-        incorrectAnswers.classlist.add('incorrect-color');
-    }
+// function handleAnswer(){
+//     if (selectedValue === questions.correctAnswer){
+//         correctAnswer.classlist.add('correct-color');
+//     } else (selectedValue === incorrectAnswers){
+//         incorrectAnswers.classlist.add('incorrect-color');
+//     }
 
-}
+// }
+
+questions.forEach((question) => {
+    console.log(question.correctAnswer);
+});
+
+questions.forEach((question) => {
+    console.log(question.incorrectAnswers);
+});
+
+
+//display questions rutan .
 
 console.log(handleAnswer);
 
