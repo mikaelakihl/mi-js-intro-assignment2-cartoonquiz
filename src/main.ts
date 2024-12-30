@@ -1,6 +1,6 @@
 import './style.scss';
 import questions from './modules/questions';
-import startTimer from './modules/timer';
+import { startTimer, stopTimer } from './modules/timer';
 
 
 // -----------------------------------------------------------------------------
@@ -24,5 +24,3 @@ function playGame(){
 
 // temporary solution to error for not using variable
 console.log(questions);
-
-startTimer();
