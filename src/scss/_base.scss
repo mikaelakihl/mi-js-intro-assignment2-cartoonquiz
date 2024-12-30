@@ -61,3 +61,11 @@ body{
     display: none;
 
 }
+
+.correct-color{
+    background-color: variables.$right-answer-color;
+}
+
+.correct-color{
+    background-color: variables.$wrong-answer-color;
+}
