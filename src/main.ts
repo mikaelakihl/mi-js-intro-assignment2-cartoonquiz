@@ -12,7 +12,7 @@ const logoInHeader = document.querySelector('#logoInHeader');
 // const homePage = document.querySelector('#homePage');
 
 // prepared variables for future use, they are currently commented out until they are used
-// let currentScore = 0; 
+let currentScore = 0; 
 
 
 // temporary solution to error for not using variable
@@ -46,7 +46,7 @@ const isFirstRound = currentRound === 1;
 const currentQuestions = isFirstRound ? firstRoundQuestions : secondRoundQuestions;
 
 function playGame() {
-    // currentScore = 0;
+    currentScore = 0;
     console.log(currentRound);
 
     //select first 10 or last 10 questions
@@ -115,9 +115,9 @@ function handleAnswer(event: Event){
     const correctAnswer = currentQuestions[currentQuestionIndex].correctAnswer;
 
     if(selectedAnswer === correctAnswer){
-        console.log('increment score');
+        currentScore += 5;
     } else {
-        console.log('no scoore for you');
+        currentScore -= 3;
     }
 
     currentQuestionIndex++;
@@ -130,5 +130,6 @@ function handleAnswer(event: Event){
         console.log('endQuiz');
     }
     
+    console.log('your score is' + currentScore);
     
 }
