@@ -42,16 +42,14 @@ const questionContainer = document.querySelector('section');
 const firstRoundQuestions = questions.slice(0, 10);
 const secondRoundQuestions = questions.slice(10, 20);
 let currentRound = 1;
+const isFirstRound = currentRound === 1; 
+const currentQuestions = isFirstRound ? firstRoundQuestions : secondRoundQuestions;
 
 function playGame() {
     // currentScore = 0;
     console.log(currentRound);
 
     //select first 10 or last 10 questions
-    const isFirstRound = currentRound === 1; 
-
-    const currentQuestions = isFirstRound ? firstRoundQuestions : secondRoundQuestions;
-
     currentRound = isFirstRound ? 2 : 1;
     
     console.log(currentQuestions);
@@ -61,7 +59,54 @@ function playGame() {
     playGameBtnContainer!.classList.toggle('hidden');
     questionContainer!.classList.toggle('hidden');
 
-    //call on function displayQuestion()
+    
+    displayQuestion()
     startTimer()
     console.log('playGame function run');
+}
+
+// -----------------------------------------------------------------------------
+// ----------------------------- DISPLAY QUESTION ------------------------------
+// -----------------------------------------------------------------------------
+
+const questionBox = document.querySelector('#questionBox');
+const answerBox = document.querySelector('#answerBox');
+let currentQuestionIndex = 0;
+
+
+function displayQuestion(){
+    const question = currentQuestions[currentQuestionIndex];
+    const answers = [...question.incorrectAnswers];
+
+    answers.push(question.correctAnswer);
+    answers.sort(() => Math.random() - 0.5);
+
+    questionBox!.innerHTML = `
+        <div class="img-container">
+         <img src=${question.image?.src} alt=${question.image?.alt}>
+        </div>
+        <h3>${question.question}</h3>
+    
+    `;
+
+    answerBox!.innerHTML = answers.map(answer => `
+        <li>
+            <label>
+                <span>${answer}</span>
+                <input type="radio" name="answers" value="${answer}">
+            </label>
+        </li>
+    `).join('');
+
+    const answerInputs = document.querySelectorAll('input[name="answers"]');
+    answerInputs.forEach(input => {
+        input.addEventListener('change', handleAnswer);
+    });
+
+
+}
+
+function handleAnswer(){
+    currentQuestionIndex++;
+    displayQuestion();
 }
