@@ -70,6 +70,7 @@ function playGame() {
 // -----------------------------------------------------------------------------
 
 const questionBox = document.querySelector('#questionBox');
+const answerBox = document.querySelector('#answerBox');
 
 function displayQuestion(){
 
@@ -79,7 +80,30 @@ function displayQuestion(){
         </div>
         <h3>${currentQuestions[0].question}</h3>
     
+    `;
+
+    answerBox!.innerHTML =`
+        <li>
+         <label>
+         <span>${currentQuestions[0].correctAnswer}</span>
+          <input type="radio" name="answers" value="${currentQuestions[0].correctAnswer}">
+         </label>
+        </li>
+        <li>
+         <label>
+         <span>${currentQuestions[0].incorrectAnswers[0]}</span>
+          <input type="radio" name="answers" value="${currentQuestions[0].incorrectAnswers[0]}">
+         </label>
+        </li>
+        <li>
+         <label>
+          <span>${currentQuestions[0].incorrectAnswers[1]}</span>
+          <input type="radio" name="answers" value="${currentQuestions[0].incorrectAnswers[1]}">
+         </label>
+        </li>
+    
     `
+
 
 
 
