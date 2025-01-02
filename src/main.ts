@@ -123,6 +123,12 @@ function handleAnswer(event: Event){
     currentQuestionIndex++;
 
     console.log(currentQuestionIndex);
+
+    if (currentQuestionIndex < currentQuestions.length){
+        displayQuestion();
+    } else {
+        console.log('endQuiz');
+    }
     
-    displayQuestion();
+    
 }
