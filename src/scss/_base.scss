@@ -1,8 +1,9 @@
 @use 'variables';
 
 body{
-    background-color: #dbf26e;
-    background-image: linear-gradient(319deg, #dbf26e 0%, #61fa74 37%, #1cfdd6 100%);
+    background: linear-gradient(319deg, #dbf26e 0%, #61fa74 37%, #1cfdd6 100%);
+    background-size: cover;
+    background-attachment: fixed;
     font-family: variables.$primary-font;
     font-size: variables.$small-font-size;
 }
@@ -55,6 +56,11 @@ body{
     .play-game-btn:hover{
         background-color: variables.$hover-color;
     }
+}
+
+.img-container{
+    height: auto;
+    width: 100%;
 }
 
 .hidden{
