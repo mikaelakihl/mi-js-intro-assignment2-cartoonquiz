@@ -116,6 +116,7 @@ function handleAnswer(event: Event){
 
     if(selectedAnswer === correctAnswer){
         currentScore += 5;
+        selectedAnswer.style.backgroundColor = 'green'; 
     } else {
         currentScore -= 3;
     }
@@ -125,7 +126,7 @@ function handleAnswer(event: Event){
     console.log(currentQuestionIndex);
 
     if (currentQuestionIndex < currentQuestions.length){
-        displayQuestion();
+        // displayQuestion();
     } else {
         console.log('endQuiz');
     }
