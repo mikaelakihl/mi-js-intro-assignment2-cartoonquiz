@@ -1,5 +1,6 @@
 import './style.scss';
 import questions from './modules/questions';
+import { startTimer, stopTimer } from './modules/timer';
 
 
 // -----------------------------------------------------------------------------
