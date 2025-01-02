@@ -59,7 +59,8 @@ function playGame() {
     playGameBtnContainer!.classList.toggle('hidden');
     questionContainer!.classList.toggle('hidden');
 
-    //call on function displayQuestion()
+    
+    displayQuestion()
     startTimer()
     console.log('playGame function run');
 }
@@ -68,7 +69,18 @@ function playGame() {
 // ----------------------------- DISPLAY QUESTION ------------------------------
 // -----------------------------------------------------------------------------
 
-function displayQuestion(currentQuestions){
+const questionBox = document.querySelector('#questionBox');
+
+function displayQuestion(){
+
+    questionBox!.innerHTML = `
+        <div class="img-container">
+         <img src=${currentQuestions[0].image?.src} alt=${currentQuestions[0].image?.alt}>
+        </div>
+        <h3>${currentQuestions[0].question}</h3>
+    
+    `
+
 
 
 }
