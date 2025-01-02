@@ -106,7 +106,23 @@ function displayQuestion(){
 
 }
 
-function handleAnswer(){
+// -----------------------------------------------------------------------------
+// ----------------------------- HANDLE ANSWER ---------------------------------
+// -----------------------------------------------------------------------------
+
+function handleAnswer(event: Event){
+    const selectedAnswer = (event.target as HTMLInputElement).value;
+    const correctAnswer = currentQuestions[currentQuestionIndex].correctAnswer;
+
+    if(selectedAnswer === correctAnswer){
+        console.log('increment score');
+    } else {
+        console.log('no scoore for you');
+    }
+
     currentQuestionIndex++;
+
+    console.log(currentQuestionIndex);
+    
     displayQuestion();
 }
