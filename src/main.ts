@@ -71,40 +71,42 @@ function playGame() {
 
 const questionBox = document.querySelector('#questionBox');
 const answerBox = document.querySelector('#answerBox');
+let currentQuestionIndex = 0;
+
 
 function displayQuestion(){
+    const question = currentQuestions[currentQuestionIndex];
+    const answers = [...question.incorrectAnswers];
+
+    answers.push(question.correctAnswer);
+    answers.sort(() => Math.random() - 0.5);
 
     questionBox!.innerHTML = `
         <div class="img-container">
-         <img src=${currentQuestions[0].image?.src} alt=${currentQuestions[0].image?.alt}>
+         <img src=${question.image?.src} alt=${question.image?.alt}>
         </div>
-        <h3>${currentQuestions[0].question}</h3>
+        <h3>${question.question}</h3>
     
     `;
 
-    answerBox!.innerHTML =`
+    answerBox!.innerHTML = answers.map(answer => `
         <li>
-         <label>
-         <span>${currentQuestions[0].correctAnswer}</span>
-          <input type="radio" name="answers" value="${currentQuestions[0].correctAnswer}">
-         </label>
+            <label>
+                <span>${answer}</span>
+                <input type="radio" name="answers" value="${answer}">
+            </label>
         </li>
-        <li>
-         <label>
-         <span>${currentQuestions[0].incorrectAnswers[0]}</span>
-          <input type="radio" name="answers" value="${currentQuestions[0].incorrectAnswers[0]}">
-         </label>
-        </li>
-        <li>
-         <label>
-          <span>${currentQuestions[0].incorrectAnswers[1]}</span>
-          <input type="radio" name="answers" value="${currentQuestions[0].incorrectAnswers[1]}">
-         </label>
-        </li>
-    
-    `
+    `).join('');
+
+    const answerInputs = document.querySelectorAll('input[name="answers"]');
+    answerInputs.forEach(input => {
+        input.addEventListener('change', handleAnswer);
+    });
 
 
+}
 
-
+function handleAnswer(){
+    currentQuestionIndex++;
+    displayQuestion();
 }
