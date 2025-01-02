@@ -42,16 +42,14 @@ const questionContainer = document.querySelector('section');
 const firstRoundQuestions = questions.slice(0, 10);
 const secondRoundQuestions = questions.slice(10, 20);
 let currentRound = 1;
+const isFirstRound = currentRound === 1; 
+const currentQuestions = isFirstRound ? firstRoundQuestions : secondRoundQuestions;
 
 function playGame() {
     // currentScore = 0;
     console.log(currentRound);
 
     //select first 10 or last 10 questions
-    const isFirstRound = currentRound === 1; 
-
-    const currentQuestions = isFirstRound ? firstRoundQuestions : secondRoundQuestions;
-
     currentRound = isFirstRound ? 2 : 1;
     
     console.log(currentQuestions);
@@ -64,4 +62,13 @@ function playGame() {
     //call on function displayQuestion()
     startTimer()
     console.log('playGame function run');
+}
+
+// -----------------------------------------------------------------------------
+// ----------------------------- DISPLAY QUESTION ------------------------------
+// -----------------------------------------------------------------------------
+
+function displayQuestion(currentQuestions){
+
+
 }
