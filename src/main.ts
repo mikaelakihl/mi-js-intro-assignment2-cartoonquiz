@@ -81,7 +81,7 @@ function displayQuestion(){
     `;
 
     answerBox!.innerHTML = answers.map(answer => `
-        <li>
+        <li class="answers">
             <label>
                 <span>${answer}</span>
                 <input type="radio" name="answers" value="${answer}">

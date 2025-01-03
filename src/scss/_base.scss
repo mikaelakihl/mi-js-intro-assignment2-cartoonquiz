@@ -113,6 +113,27 @@ main{
     padding: 30px 20px 0px;
 }
 
+.answer-box{
+    padding: 30px;
+    ul{
+        list-style-type: none;
+        padding: 0;
+        input{
+            opacity: 0.01;
+            z-index: 100;
+        }
+        li:hover {
+            border: 2px solid variables.$primary-color;
+        }
+    }
+}
+.answers{
+    background-color: variables.$secondary-color;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 5px;
+}
+
 // -----------------------------------------------------------------------------
 // ------------------------------- HELP CLASSES --------------------------------
 // -----------------------------------------------------------------------------
