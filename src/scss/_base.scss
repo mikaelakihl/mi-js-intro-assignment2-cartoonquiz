@@ -10,6 +10,7 @@ body{
 
 main{
     margin: 20px;
+    
 }
 
 // -----------------------------------------------------------------------------
@@ -67,6 +68,26 @@ main{
 // -----------------------------------------------------------------------------
 // --------------------------------- QUESTIONS ---------------------------------
 // -----------------------------------------------------------------------------
+
+.question-timer-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    h2 {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.timer-display{
+    background-color: variables.$secondary-color;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .img-container{
     height: auto;
