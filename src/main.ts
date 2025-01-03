@@ -50,6 +50,7 @@ function playGame() {
     playGameBtnContainer!.classList.toggle('hidden');
     questionContainer!.classList.toggle('hidden');
 
+    currentQuestions.sort(() => Math.random() - 0.5);
     
     displayQuestion()
     startTimer()
