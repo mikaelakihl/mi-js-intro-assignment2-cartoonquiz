@@ -15,10 +15,6 @@ const logoInHeader = document.querySelector('#logoInHeader');
 let currentScore = 0; 
 
 
-// temporary solution to error for not using variable
-console.log(questions);
-
-
 // -----------------------------------------------------------------------------
 // --------------------------------- FIRST PAGE --------------------------------
 // -----------------------------------------------------------------------------
@@ -47,14 +43,9 @@ const currentQuestions = isFirstRound ? firstRoundQuestions : secondRoundQuestio
 
 function playGame() {
     currentScore = 0;
-    console.log(currentRound);
 
     //select first 10 or last 10 questions
     currentRound = isFirstRound ? 2 : 1;
-    
-    console.log(currentQuestions);
-    console.log(currentRound);
-    
     
     playGameBtnContainer!.classList.toggle('hidden');
     questionContainer!.classList.toggle('hidden');
@@ -62,7 +53,6 @@ function playGame() {
     
     displayQuestion()
     startTimer()
-    console.log('playGame function run');
 }
 
 // -----------------------------------------------------------------------------
@@ -112,25 +102,27 @@ function displayQuestion(){
 
 function handleAnswer(event: Event){
     const selectedAnswer = (event.target as HTMLInputElement).value;
+    const selectedAnswerElement = (event.target as HTMLInputElement);
+    const parentLi = selectedAnswerElement.closest<HTMLLIElement>('li'); 
     const correctAnswer = currentQuestions[currentQuestionIndex].correctAnswer;
 
     if(selectedAnswer === correctAnswer){
         currentScore += 5;
-        selectedAnswer.style.backgroundColor = 'green'; 
+        parentLi!.classList.add('correct-color');
     } else {
         currentScore -= 3;
+        parentLi!.classList.add('incorrect-color');
     }
 
-    currentQuestionIndex++;
+    setTimeout(() => {
+        currentQuestionIndex++;
 
-    console.log(currentQuestionIndex);
+        if (currentQuestionIndex < currentQuestions.length){
+            displayQuestion();
+        } else {
+            console.log('endQuiz');
+        }
+    }, 700);
 
-    if (currentQuestionIndex < currentQuestions.length){
-        // displayQuestion();
-    } else {
-        console.log('endQuiz');
-    }
-    
-    console.log('your score is' + currentScore);
     
 }
