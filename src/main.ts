@@ -51,7 +51,7 @@ function playGame() {
     questionContainer!.classList.toggle('hidden');
 
     currentQuestions.sort(() => Math.random() - 0.5);
-    
+
     displayQuestion()
     startTimer()
 }
@@ -76,7 +76,7 @@ function displayQuestion(){
         <div class="img-container">
          <img src=${question.image?.src} alt=${question.image?.alt}>
         </div>
-        <h3>${question.question}</h3>
+        <h3 class="question">${question.question}</h3>
     
     `;
 

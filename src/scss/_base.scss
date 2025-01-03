@@ -84,7 +84,10 @@ main{
 .question-box{
     padding: 20px;
     background-color: variables.$box-color;
-    
+}
+
+.question{
+    color: variables.$secondary-color;
 }
 
 // -----------------------------------------------------------------------------
