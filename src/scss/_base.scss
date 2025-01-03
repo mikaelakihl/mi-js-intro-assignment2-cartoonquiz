@@ -67,3 +67,11 @@ body{
     display: none;
 
 }
+
+.correct-color{
+    background-color: variables.$right-answer-color;
+}
+
+.incorrect-color{
+    background-color: variables.$wrong-answer-color;
+}
