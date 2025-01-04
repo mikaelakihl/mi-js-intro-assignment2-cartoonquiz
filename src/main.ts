@@ -71,6 +71,11 @@ function displayQuestion(){
     answers.push(question.correctAnswer);
     answers.sort(() => Math.random() - 0.5);
 
+    //Update the question number
+    const questionIndexElement = document.querySelector('#questionIndex')!;
+    questionIndexElement.textContent = `Question ${currentQuestionIndex + 1}`;
+
+
     questionBox!.innerHTML = `
         <div class="img-container">
          <img src=${question.image?.src} alt=${question.image?.alt}>
