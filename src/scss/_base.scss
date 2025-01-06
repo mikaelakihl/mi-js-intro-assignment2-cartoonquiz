@@ -9,32 +9,33 @@ body{
 }
 
 
-.header{
+.header {
+    cursor: pointer;
     background-color: variables.$header-box-color;
 
-    h1:hover{
+    h1:hover {
         background-color: variables.$hover-color;
     }
 }
 
-.header-h1{
+.header-h1 {
     font-family: variables.$secondary-font;
     font-size: 2.5rem;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.5rem;
     text-shadow: rgba(38, 111, 48, 0.82) 5px 2px 5px;
-
 }
 
-.play-game-btn-container{
+.play-game-btn-container {
     margin: 1rem;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    .play-game-btn{
+    .play-game-btn {
+        cursor: pointer;
         padding: 1rem;
         margin: 1rem;
         display: flex;
@@ -47,18 +48,18 @@ body{
         border: black solid;
         text-align: center;
 
-        .play-game-btn-icon{
+        .play-game-btn-icon {
             height: 100px;
             width: 100px;
         }
     }
 
-    .play-game-btn:hover{
+    .play-game-btn:hover {
         background-color: variables.$hover-color;
     }
 }
 
-.img-container{
+.img-container {
     height: auto;
     width: 100%;
 }
@@ -81,6 +82,6 @@ body{
     justify-content: center;
 }
 
-.hidden{
+.hidden {
     display: none;
 }
