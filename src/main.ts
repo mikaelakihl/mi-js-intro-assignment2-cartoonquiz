@@ -132,3 +132,5 @@ function handleAnswer(event: Event){
 
     
 }
+
+console.log(stopTimer);
