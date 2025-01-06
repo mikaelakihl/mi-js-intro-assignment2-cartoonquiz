@@ -16,6 +16,7 @@ main {
 // -------------------------------- FIRST PAGE ---------------------------------
 // -----------------------------------------------------------------------------
 .header {
+    cursor: pointer;
     background-color: variables.$header-box-color;
 
     h1:hover {

@@ -16,6 +16,7 @@
   <header class="header">
     <h1 class="header-h1" id="logoInHeader">Cartoon Quiz</h1>
   </header>
+
   <main>
     <div class="play-game-btn-container" id="playGameBtnContainer">
       <p>Press button to start quiz</p>
@@ -29,17 +30,21 @@
         <span>Play Game</span>
       </button>
     </div>
+
     <section class="hidden">
-      <h2 id="questionIndex">Question</h2>
-      <div id="timerDisplay">00:00</div>
-      <div id="questionBox"></div>
+      <div class="question-timer-container">
+        <h2 id="questionIndex">Question</h2>
+        <div class="timer-display" id="timerDisplay">00:00</div>
+      </div>
+      <div class="question-box" id="questionBox"></div>
       <!--box with picture and question or result-->
-      <div>
+      <div class="answer-box">
         <ul id="answerBox">
           Answers
         </ul>
       </div>
     </section>
+
     <div id="resultBox" class="result-box-container">
       <div class="result-box">
         <p>0/10</p>

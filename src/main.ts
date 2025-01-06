@@ -6,7 +6,6 @@ import { startTimer, stopTimer } from './modules/timer';
 // -----------------------------------------------------------------------------
 // --------------------------------- VARIABLES ---------------------------------
 // -----------------------------------------------------------------------------
-
 const playGameBtn  = document.querySelector('#playGameBtn');
 const logoInHeader = document.querySelector('#logoInHeader');
 // const homePage = document.querySelector('#homePage');
@@ -94,20 +93,18 @@ function displayQuestion() {
     answerInputs.forEach(input => {
         input.addEventListener('change', handleAnswer);
     });
-
-
 }
 
 // -----------------------------------------------------------------------------
 // ----------------------------- HANDLE ANSWER ---------------------------------
 // -----------------------------------------------------------------------------
-function handleAnswer(event: Event){
+function handleAnswer(event: Event) {
     const selectedAnswer = (event.target as HTMLInputElement).value;
     const selectedAnswerElement = (event.target as HTMLInputElement);
     const parentLi = selectedAnswerElement.closest<HTMLLIElement>('li'); 
     const correctAnswer = currentQuestions[currentQuestionIndex].correctAnswer;
 
-    if(selectedAnswer === correctAnswer){
+    if(selectedAnswer === correctAnswer) {
         currentScore += 5;
         parentLi!.classList.add('correct-color');
     } else {
@@ -124,8 +121,6 @@ function handleAnswer(event: Event){
             console.log('endQuiz');
         }
     }, 700);
-
-    
 }
 
 // -----------------------------------------------------------------------------
