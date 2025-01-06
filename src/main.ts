@@ -22,13 +22,11 @@ console.log(questions);
 // -----------------------------------------------------------------------------
 // --------------------------------- FIRST PAGE --------------------------------
 // -----------------------------------------------------------------------------
-
-
 playGameBtn!.addEventListener('click', playGame);
 
 logoInHeader!.addEventListener('click', goBackToStartPage);
 
-function goBackToStartPage(){
+function goBackToStartPage() {
     window.location.href = '/';
 }
 
@@ -36,7 +34,6 @@ function goBackToStartPage(){
 // -----------------------------------------------------------------------------
 // --------------------------------- PLAY GAME ---------------------------------
 // -----------------------------------------------------------------------------
-
 const playGameBtnContainer = document.querySelector('#playGameBtnContainer');
 const questionContainer = document.querySelector('section');
 const firstRoundQuestions = questions.slice(0, 10);
@@ -68,13 +65,12 @@ function playGame() {
 // -----------------------------------------------------------------------------
 // ----------------------------- DISPLAY QUESTION ------------------------------
 // -----------------------------------------------------------------------------
-
 const questionBox = document.querySelector('#questionBox');
 const answerBox = document.querySelector('#answerBox');
 let currentQuestionIndex = 0;
 
 
-function displayQuestion(){
+function displayQuestion() {
     const question = currentQuestions[currentQuestionIndex];
     const answers = [...question.incorrectAnswers];
 
@@ -106,7 +102,7 @@ function displayQuestion(){
 
 }
 
-function handleAnswer(){
+function handleAnswer() {
     currentQuestionIndex++;
     displayQuestion();
 }
@@ -114,3 +110,10 @@ function handleAnswer(){
 // -----------------------------------------------------------------------------
 // ----------------------------- END GAME --------------------------------------
 // -----------------------------------------------------------------------------
+function endQuiz() {
+    stopTimer();
+
+    const resultBox = document.getElementById('resultBox');
+    resultBox!.classList.toggle('hidden');
+
+}
