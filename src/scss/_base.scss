@@ -1,6 +1,6 @@
 @use 'variables';
 
-body{
+body {
     background: linear-gradient(319deg, #dbf26e 0%, #61fa74 37%, #1cfdd6 100%);
     background-size: cover;
     background-attachment: fixed;
@@ -8,9 +8,14 @@ body{
     font-size: variables.$small-font-size;
 }
 
+main {
+    margin: 20px;
+}
 
+// -----------------------------------------------------------------------------
+// -------------------------------- FIRST PAGE ---------------------------------
+// -----------------------------------------------------------------------------
 .header {
-    cursor: pointer;
     background-color: variables.$header-box-color;
 
     h1:hover {
@@ -59,11 +64,78 @@ body{
     }
 }
 
+// -----------------------------------------------------------------------------
+// --------------------------------- QUESTIONS ---------------------------------
+// -----------------------------------------------------------------------------
+.question-timer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    h2 {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.timer-display {
+    background-color: variables.$secondary-color;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .img-container {
     height: auto;
     width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
+.question-box {
+    padding: 20px;
+    background-color: variables.$box-color;
+}
+
+.question {
+    color: variables.$secondary-color;
+    text-align: center;
+    padding: 30px 20px 0px;
+}
+
+.answer-box {
+    padding: 30px;
+    ul{
+        list-style-type: none;
+        padding: 0;
+        input{
+            opacity: 0.01;
+            z-index: 100;
+        }
+        li:hover {
+            border: 2px solid variables.$primary-color;
+        }
+    }
+}
+
+.answers {
+    background-color: variables.$secondary-color;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 5px;
+}
+
+// -----------------------------------------------------------------------------
+// --------------------------------- END GAME ----------------------------------
+// -----------------------------------------------------------------------------
 .result-box-container {
     display: flex;
     flex-direction: column;
@@ -72,7 +144,7 @@ body{
 }
 
 .result-box {
-    width: 50%;
+    width: 100%;
     min-height: 400px;
     background-color: rgba(0, 0, 0, 0.55);
     color: white;
@@ -82,6 +154,17 @@ body{
     justify-content: center;
 }
 
+// -----------------------------------------------------------------------------
+// ------------------------------- HELP CLASSES --------------------------------
+// -----------------------------------------------------------------------------
 .hidden {
     display: none;
+}
+
+.correct-color {
+    background-color: variables.$right-answer-color;
+}
+
+.incorrect-color {
+    background-color: variables.$wrong-answer-color;
 }
