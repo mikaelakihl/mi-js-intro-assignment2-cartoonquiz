@@ -121,6 +121,9 @@ main{
             opacity: 0.01;
             z-index: 100;
         }
+        label{ 
+            display: block;
+        }
         li:hover {
             border: 2px solid variables.$primary-color;
         }
