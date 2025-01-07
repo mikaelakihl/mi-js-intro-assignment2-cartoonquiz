@@ -15,22 +15,21 @@ main{
 // -----------------------------------------------------------------------------
 // -------------------------------- FIRST PAGE ---------------------------------
 // -----------------------------------------------------------------------------
-.header{
+header{
     background-color: variables.$header-box-color;
-
-    h1:hover{
-        background-color: variables.$hover-color;
-    }
 }
 
-.header-h1{
+h1{
     font-family: variables.$secondary-font;
     font-size: 2rem;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.5rem;
     text-shadow: rgba(38, 111, 48, 0.82) 5px 2px 5px;
+}
 
+h1:hover{
+    background-color: variables.$hover-color;
 }
 
 .play-game-btn-container{

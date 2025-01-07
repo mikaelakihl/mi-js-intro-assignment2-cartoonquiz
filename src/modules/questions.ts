@@ -8,6 +8,8 @@ interface IQuestion {
     // Optional field to store image data
     src: string;
     alt: string;
+    width: number;
+    height: number;
   };
 }
 
@@ -20,6 +22,8 @@ const questions: IQuestion[] = [
     image: {
       src: 'question_images/spongebob.webp',
       alt: 'SpongeBob SquarePants',
+      width: 1920,
+      height: 1080,
     },
   },
   {
@@ -30,6 +34,8 @@ const questions: IQuestion[] = [
     image: {
       src: 'question_images/batman.webp',
       alt: 'Batman',
+      width: 1536,
+      height: 864,
     },
   },
   {
@@ -40,6 +46,8 @@ const questions: IQuestion[] = [
     image: {
       src: 'question_images/pikachu.webp',
       alt: 'Pikachu',
+      width: 8000,
+      height: 4500,
     },
   },
   {
@@ -51,6 +59,8 @@ const questions: IQuestion[] = [
     image: {
       src: 'question_images/dexter.webp',
       alt: 'Dexter and older sister',
+      width: 705,
+      height: 397,
     },
   },
   {
@@ -62,6 +72,8 @@ const questions: IQuestion[] = [
     image: {
       src: 'question_images/stitch.webp',
       alt: 'Stitch and friend',
+      width: 1100,
+      height: 733,
     },
   },
   {
@@ -73,6 +85,8 @@ const questions: IQuestion[] = [
     image: {
       src: 'question_images/powerpuff-girls.webp',
       alt: 'Powerpuff girls fighting villain',
+      width: 792,
+      height: 776,
     },
   },
   {
@@ -84,6 +98,8 @@ const questions: IQuestion[] = [
     image: {
       src: 'question_images/avatar.webp',
       alt: 'Aang flying',
+      width: 1800,
+      height: 1802,
     },
   },
   {
@@ -94,6 +110,8 @@ const questions: IQuestion[] = [
     image: {
       src: 'question_images/ash-ketchum.webp',
       alt: 'Ash Ketchum and Pikachu',
+      width: 1004,
+      height: 665,
     },
   },
   {
@@ -105,6 +123,8 @@ const questions: IQuestion[] = [
     image: {
       src: 'question_images/tom-and-jerry.webp',
       alt: 'Tom and Jerry',
+      width: 1080,
+      height: 608,
     },
   },
   {
@@ -116,6 +136,8 @@ const questions: IQuestion[] = [
     image: {
       src: 'question_images/adventure-time.webp',
       alt: 'Adventuretime characters',
+      width: 1280,
+      height: 670,
     },
   },
   {
@@ -126,6 +148,8 @@ const questions: IQuestion[] = [
     image: {
       src: 'question_images/futurama.webp',
       alt: 'Fry and love interest',
+      width: 1366,
+      height: 768,
     },
   },
   {
@@ -136,6 +160,8 @@ const questions: IQuestion[] = [
     image: {
       src: 'question_images/south-park.webp',
       alt: 'Kenny',
+      width: 1600,
+      height: 800,
     },
   },
   {
@@ -147,6 +173,8 @@ const questions: IQuestion[] = [
     image: {
       src: 'question_images/courage-the-cowardly-dog.webp',
       alt: 'Courage the Cowardly Dog',
+      width: 1400,
+      height: 729,
     },
   },
   {
@@ -157,6 +185,8 @@ const questions: IQuestion[] = [
     image: {
       src: 'question_images/smurfs.webp',
       alt: 'Villain and smurf',
+      width: 1280,
+      height: 720,
     },
   },
   {
@@ -167,6 +197,8 @@ const questions: IQuestion[] = [
     image: {
       src: 'question_images/flintstones.webp',
       alt: 'Flintstones family',
+      width: 1733,
+      height: 1159,
     },
   },
   {
@@ -177,6 +209,8 @@ const questions: IQuestion[] = [
     image: {
       src: 'question_images/kim-possible.webp',
       alt: 'Kim Possible',
+      width: 600,
+      height: 500,
     },
   },
   {
@@ -187,6 +221,8 @@ const questions: IQuestion[] = [
     image: {
       src: 'question_images/scooby-doo.webp',
       alt: 'Scooby-doo',
+      width: 1110,
+      height: 1600,
     },
   },
   {
@@ -198,6 +234,8 @@ const questions: IQuestion[] = [
     image: {
       src: 'question_images/simpsons.webp',
       alt: 'Homer Simpson',
+      width: 4000,
+      height: 4000,
     },
   },
   {
@@ -209,6 +247,8 @@ const questions: IQuestion[] = [
     image: {
       src: 'question_images/rick-and-morty.webp',
       alt: 'Rick and Morty',
+      width: 1920,
+      height: 1080,
     },
   },
   {
@@ -219,6 +259,8 @@ const questions: IQuestion[] = [
     image: {
       src: 'question_images/lion-king.webp',
       alt: 'Lion King characters',
+      width: 1920,
+      height: 1080,
     },
   },
 ];

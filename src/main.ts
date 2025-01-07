@@ -79,7 +79,7 @@ function displayQuestion(){
 
     questionBox!.innerHTML = `
         <div class="img-container">
-         <img src=${question.image?.src} alt=${question.image?.alt}>
+         <img src=${question.image?.src} alt=${question.image?.alt} width=${question.image?.width} height=${question.image?.height}>
         </div>
         <h3 class="question">${question.question}</h3>
     
