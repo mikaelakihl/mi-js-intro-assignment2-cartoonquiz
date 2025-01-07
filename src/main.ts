@@ -131,7 +131,7 @@ function endQuiz() {
     stopTimer();
 
     const sections = document.querySelectorAll('section > *');
-    const resultBox = document.getElementById('resultBox');
+    const resultBox = document.querySelector('#resultBox');
 
     sections.forEach(section => {
         section!.classList.toggle('hidden');
@@ -147,6 +147,6 @@ function endQuiz() {
     <button class="restart-btn" id="restartBtn">Restart</button>
     `;
 
-    const restartBtn = document.getElementById('restartBtn');
+    const restartBtn = document.querySelector('#restartBtn');
     restartBtn!.addEventListener('click', playGame);
 }
