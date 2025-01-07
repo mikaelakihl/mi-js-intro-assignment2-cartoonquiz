@@ -144,6 +144,9 @@ function endQuiz() {
         <p>Your Score: ${currentScore}</p>
         <p>Time: ${timeTaken} seconds</p>
     </div>
-    <button>Restart</button>
+    <button class="restart-btn" id="restartBtn">Restart</button>
     `;
+
+    const restartBtn = document.getElementById('restartBtn');
+    restartBtn!.addEventListener('click', playGame);
 }

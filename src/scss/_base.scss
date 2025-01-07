@@ -165,6 +165,17 @@ main {
     font-size: 9rem;
 }
 
+.restart-btn {
+    cursor: pointer;
+    text-transform: uppercase;
+    border: none;
+    padding: 8px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
 // -----------------------------------------------------------------------------
 // ------------------------------- HELP CLASSES --------------------------------
 // -----------------------------------------------------------------------------
