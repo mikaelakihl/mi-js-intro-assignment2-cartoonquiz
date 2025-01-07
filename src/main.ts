@@ -10,9 +10,7 @@ const playGameBtn  = document.querySelector('#playGameBtn');
 const logoInHeader = document.querySelector('#logoInHeader');
 // const homePage = document.querySelector('#homePage');
 
-// prepared variables for future use, they are currently commented out until they are used
 let currentScore = 0; 
-
 
 // -----------------------------------------------------------------------------
 // --------------------------------- FIRST PAGE --------------------------------
