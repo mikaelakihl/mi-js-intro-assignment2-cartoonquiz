@@ -48,12 +48,16 @@ main {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 40vw;
-        height: 30vw;
+        width: 45vw;
+        height: 35vw;
         background-color: transparent;
         border: black solid;
         text-align: center;
 
+        .play-game-btn-icon {
+            height: 80px;
+            width: 80px;
+            
         .play-game-btn-icon {
             height: 100px;
             width: 100px;
