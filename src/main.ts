@@ -1,6 +1,6 @@
 import './style.scss';
 import questions from './modules/questions';
-import { startTimer, stopTimer } from './modules/timer';
+import { startTimer, stopTimer, timeTaken } from './modules/timer';
 
 
 // -----------------------------------------------------------------------------
@@ -10,7 +10,7 @@ const playGameBtn  = document.querySelector('#playGameBtn');
 const logoInHeader = document.querySelector('#logoInHeader');
 // const homePage = document.querySelector('#homePage');
 
-let currentScore = 0; 
+let currentScore = 0;
 
 // -----------------------------------------------------------------------------
 // --------------------------------- FIRST PAGE --------------------------------
@@ -65,7 +65,7 @@ function displayQuestion() {
     answers.push(question.correctAnswer);
     answers.sort(() => Math.random() - 0.5);
 
-    //Update the question number
+    // Update the question number
     const questionIndexElement = document.querySelector('#questionIndex')!;
     questionIndexElement.textContent = `Question ${currentQuestionIndex + 1}`;
 
@@ -96,14 +96,17 @@ function displayQuestion() {
 // -----------------------------------------------------------------------------
 // ----------------------------- HANDLE ANSWER ---------------------------------
 // -----------------------------------------------------------------------------
+let totalAnswers = 0;
+
 function handleAnswer(event: Event) {
     const selectedAnswer = (event.target as HTMLInputElement).value;
     const selectedAnswerElement = (event.target as HTMLInputElement);
     const parentLi = selectedAnswerElement.closest<HTMLLIElement>('li'); 
     const correctAnswer = currentQuestions[currentQuestionIndex].correctAnswer;
 
-    if(selectedAnswer === correctAnswer) {
+    if (selectedAnswer === correctAnswer) {
         currentScore += 5;
+        totalAnswers++;
         parentLi!.classList.add('correct-color');
     } else {
         currentScore -= 3;
@@ -116,7 +119,7 @@ function handleAnswer(event: Event) {
         if (currentQuestionIndex < currentQuestions.length) {
             displayQuestion();
         } else {
-            console.log('endQuiz');
+            endQuiz();
         }
     }, 700);
 }
@@ -127,7 +130,20 @@ function handleAnswer(event: Event) {
 function endQuiz() {
     stopTimer();
 
+    const sections = document.querySelectorAll('section > *');
     const resultBox = document.getElementById('resultBox');
+
+    sections.forEach(section => {
+        section!.classList.toggle('hidden');
+    });
     resultBox!.classList.toggle('hidden');
 
+    resultBox!.innerHTML = `
+    <div class="result-box">
+        <p class="score-of-ten">${totalAnswers}/10</p>
+        <p>Your Score: ${currentScore}</p>
+        <p>Time: ${timeTaken} seconds</p>
+    </div>
+    <button>Restart</button>
+    `;
 }

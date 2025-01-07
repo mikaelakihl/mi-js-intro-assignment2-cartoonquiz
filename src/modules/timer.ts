@@ -1,7 +1,7 @@
 const timerDisplay = document.getElementById('timerDisplay') as HTMLElement;
 
 let timerInterval: number | null = null;
-let timeTaken = 0;
+export let timeTaken = 0;
 
 /**
  * Starts the timer
