@@ -1,6 +1,6 @@
 @use 'variables';
 
-body{
+body {
     background: linear-gradient(319deg, #dbf26e 0%, #61fa74 37%, #1cfdd6 100%);
     background-size: cover;
     background-attachment: fixed;
@@ -8,39 +8,40 @@ body{
     font-size: variables.$small-font-size;
 }
 
-main{
+main {
     margin: 20px;
 }
 
 // -----------------------------------------------------------------------------
 // -------------------------------- FIRST PAGE ---------------------------------
 // -----------------------------------------------------------------------------
-.header{
+.header {
+    cursor: pointer;
     background-color: variables.$header-box-color;
 
-    h1:hover{
+    h1:hover {
         background-color: variables.$hover-color;
     }
 }
 
-.header-h1{
+.header-h1 {
     font-family: variables.$secondary-font;
     font-size: 2rem;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.5rem;
     text-shadow: rgba(38, 111, 48, 0.82) 5px 2px 5px;
-
 }
 
-.play-game-btn-container{
+.play-game-btn-container {
     margin: 1rem;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    .play-game-btn{
+    .play-game-btn {
+        cursor: pointer;
         padding: 1rem;
         margin: 1rem;
         display: flex;
@@ -53,13 +54,17 @@ main{
         border: black solid;
         text-align: center;
 
-        .play-game-btn-icon{
+        .play-game-btn-icon {
             height: 80px;
             width: 80px;
+            
+        .play-game-btn-icon {
+            height: 100px;
+            width: 100px;
         }
     }
 
-    .play-game-btn:hover{
+    .play-game-btn:hover {
         background-color: variables.$hover-color;
     }
 }
@@ -67,8 +72,7 @@ main{
 // -----------------------------------------------------------------------------
 // --------------------------------- QUESTIONS ---------------------------------
 // -----------------------------------------------------------------------------
-
-.question-timer-container{
+.question-timer-container {
     display: flex;
     justify-content: space-between;
     padding: 10px;
@@ -78,7 +82,7 @@ main{
     }
 }
 
-.timer-display{
+.timer-display {
     background-color: variables.$secondary-color;
     height: 50px;
     width: 50px;
@@ -86,9 +90,10 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
-.img-container{
+.img-container {
     height: auto;
     width: 100%;
     aspect-ratio: 4/3;
@@ -101,18 +106,18 @@ main{
     }
 }
 
-.question-box{
+.question-box {
     padding: 20px;
     background-color: variables.$box-color;
 }
 
-.question{
+.question {
     color: variables.$secondary-color;
     text-align: center;
     padding: 30px 20px 0px;
 }
 
-.answer-box{
+.answer-box {
     padding: 30px;
     ul{
         list-style-type: none;
@@ -129,7 +134,8 @@ main{
         }
     }
 }
-.answers{
+
+.answers {
     background-color: variables.$secondary-color;
     margin-bottom: 10px;
     text-align: center;
@@ -137,16 +143,54 @@ main{
 }
 
 // -----------------------------------------------------------------------------
+// --------------------------------- END GAME ----------------------------------
+// -----------------------------------------------------------------------------
+.result-box-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 90px;
+}
+
+.result-box {
+    width: 100%;
+    min-height: 500px;
+    background-color: variables.$box-color;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+}
+
+.score-of-ten {
+    font-size: 9rem;
+}
+
+.restart-btn {
+    cursor: pointer;
+    text-transform: uppercase;
+    border: none;
+    padding: 8px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+// -----------------------------------------------------------------------------
 // ------------------------------- HELP CLASSES --------------------------------
 // -----------------------------------------------------------------------------
-
-.hidden{
+.hidden {
     display: none;
 }
-.correct-color{
+
+.correct-color {
     background-color: variables.$right-answer-color;
 }
 
-.incorrect-color{
+.incorrect-color {
     background-color: variables.$wrong-answer-color;
 }

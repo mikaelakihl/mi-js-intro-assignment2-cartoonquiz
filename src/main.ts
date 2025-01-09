@@ -1,25 +1,20 @@
 import './style.scss';
 import questions from './modules/questions';
-import { startTimer, stopTimer } from './modules/timer';
+import { startTimer, stopTimer, timeTaken } from './modules/timer';
 
 
 // -----------------------------------------------------------------------------
 // --------------------------------- VARIABLES ---------------------------------
 // -----------------------------------------------------------------------------
-
 const playGameBtn  = document.querySelector('#playGameBtn');
 const logoInHeader = document.querySelector('#logoInHeader');
 const HOME_PAGE = 'https://medieinstitutet.github.io/fed24d-js-intro-inl-2-quiz-duble-fun/';
 
-// prepared variables for future use, they are currently commented out until they are used
-let currentScore = 0; 
-
+let currentScore = 0;
 
 // -----------------------------------------------------------------------------
 // --------------------------------- FIRST PAGE --------------------------------
 // -----------------------------------------------------------------------------
-
-
 playGameBtn!.addEventListener('click', playGame);
 
 logoInHeader!.addEventListener('click', goBackToStartPage);
@@ -32,7 +27,6 @@ function goBackToStartPage(){
 // -----------------------------------------------------------------------------
 // --------------------------------- PLAY GAME ---------------------------------
 // -----------------------------------------------------------------------------
-
 const playGameBtnContainer = document.querySelector('#playGameBtnContainer');
 const questionContainer = document.querySelector('section');
 const firstRoundQuestions = questions.slice(0, 10);
@@ -59,27 +53,26 @@ function playGame() {
 // -----------------------------------------------------------------------------
 // ----------------------------- DISPLAY QUESTION ------------------------------
 // -----------------------------------------------------------------------------
-
 const questionBox = document.querySelector('#questionBox');
 const answerBox = document.querySelector('#answerBox');
 let currentQuestionIndex = 0;
 
 
-function displayQuestion(){
+function displayQuestion() {
     const question = currentQuestions[currentQuestionIndex];
     const answers = [...question.incorrectAnswers];
 
     answers.push(question.correctAnswer);
     answers.sort(() => Math.random() - 0.5);
 
-    //Update the question number
+    // Update the question number
     const questionIndexElement = document.querySelector('#questionIndex')!;
     questionIndexElement.textContent = `Question ${currentQuestionIndex + 1}`;
 
 
     questionBox!.innerHTML = `
         <div class="img-container">
-         <img src=${question.image?.src} alt=${question.image?.alt}>
+         <img src=${question.image?.src} alt=${question.image?.alt} width=${question.image?.width} height=${question.image?.height}>
         </div>
         <h3 class="question">${question.question}</h3>
     
@@ -98,22 +91,22 @@ function displayQuestion(){
     answerInputs.forEach(input => {
         input.addEventListener('change', handleAnswer);
     });
-
-
 }
 
 // -----------------------------------------------------------------------------
 // ----------------------------- HANDLE ANSWER ---------------------------------
 // -----------------------------------------------------------------------------
+let totalAnswers = 0;
 
-function handleAnswer(event: Event){
+function handleAnswer(event: Event) {
     const selectedAnswer = (event.target as HTMLInputElement).value;
     const selectedAnswerElement = (event.target as HTMLInputElement);
     const parentLi = selectedAnswerElement.closest<HTMLLIElement>('li'); 
     const correctAnswer = currentQuestions[currentQuestionIndex].correctAnswer;
 
-    if(selectedAnswer === correctAnswer){
+    if (selectedAnswer === correctAnswer) {
         currentScore += 5;
+        totalAnswers++;
         parentLi!.classList.add('correct-color');
     } else {
         currentScore -= 3;
@@ -123,14 +116,37 @@ function handleAnswer(event: Event){
     setTimeout(() => {
         currentQuestionIndex++;
 
-        if (currentQuestionIndex < currentQuestions.length){
+        if (currentQuestionIndex < currentQuestions.length) {
             displayQuestion();
         } else {
-            console.log('endQuiz');
+            endQuiz();
         }
     }, 700);
-
-    
 }
 
-console.log(stopTimer);
+// -----------------------------------------------------------------------------
+// ----------------------------- END GAME --------------------------------------
+// -----------------------------------------------------------------------------
+function endQuiz() {
+    stopTimer();
+
+    const sections = document.querySelectorAll('section > *');
+    const resultBox = document.querySelector('#resultBox');
+
+    sections.forEach(section => {
+        section!.classList.toggle('hidden');
+    });
+    resultBox!.classList.toggle('hidden');
+
+    resultBox!.innerHTML = `
+    <div class="result-box">
+        <p class="score-of-ten">${totalAnswers}/10</p>
+        <p>Your Score: ${currentScore}</p>
+        <p>Time: ${timeTaken} seconds</p>
+    </div>
+    <button class="restart-btn" id="restartBtn">Restart</button>
+    `;
+
+    const restartBtn = document.querySelector('#restartBtn');
+    restartBtn!.addEventListener('click', playGame);
+}

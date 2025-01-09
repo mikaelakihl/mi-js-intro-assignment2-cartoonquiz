@@ -1,45 +1,61 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <link rel="icon" type="image/svg+xml" href="/vite.svg">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/style.scss">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&family=Moo+Lah+Lah&display=swap" rel="stylesheet">
-    <title>Cartoon Quiz</title>
-  </head>
-  <body>
-    <header class="header">
-      <h1 class="header-h1" id="logoInHeader">Cartoon Quiz</h1>
-    </header>
-    <main>
-      <div class="play-game-btn-container" id="playGameBtnContainer">
-        <p>Press button to start quiz</p>
-        <button class="play-game-btn" id="playGameBtn">
-          <span>
-            <svg class="play-game-btn-icon" xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#000000"><path d="M320-200v-560l440 280-440 280Z"/></svg>
-          </span>
-          <span>Play Game</span>
-        </button>
-      </div>
-      <section class="hidden">
-        <div class="question-timer-container">
-          <h2 id="questionIndex">Question</h2>
-          <div class="timer-display" id="timerDisplay">00:00</div>
-        </div>
-        <div class="question-box" id="questionBox"></div>
-        <!--box with picture and question or result-->
-        <div class="answer-box">
-          <ul id="answerBox">
-            Answers
-          </ul>
-        </div>
-        <button>Restart</button>
-      </section>
-    </main>
 
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/style.scss">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&family=Moo+Lah+Lah&display=swap" rel="stylesheet">
+  <title>Cartoon Quiz</title>
+</head>
+
+<body>
+  <header>
+    <h1 id="logoInHeader">Cartoon Quiz</h1>
+  </header>
+
+  <main>
+    <div class="play-game-btn-container" id="playGameBtnContainer">
+      <p>Press button to start quiz</p>
+
+      <button class="play-game-btn" id="playGameBtn">
+        <span>
+          <svg class="play-game-btn-icon" xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960"
+            width="48px" fill="#000000">
+            <path d="M320-200v-560l440 280-440 280Z" />
+          </svg>
+        </span>
+
+        <span>Play Game</span>
+      </button>
+    </div>
+
+    <section class="hidden">
+      <div class="question-timer-container">
+        <h2 id="questionIndex">Question</h2>
+        <div class="timer-display" id="timerDisplay">00:00</div>
+      </div>
+
+      <div class="question-box" id="questionBox">
+        <!--box with picture and question or result-->
+      </div>
+
+      <div class="answer-box">
+        <ul id="answerBox">
+          <!-- Answers -->
+        </ul>
+      </div>
+    </section>
+
+    <div id="resultBox" class="result-box-container hidden">
+      <!-- ts here -->
+    </div>
+  </main>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
 </html>
