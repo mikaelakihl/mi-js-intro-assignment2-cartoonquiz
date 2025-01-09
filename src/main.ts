@@ -33,21 +33,21 @@ const firstRoundQuestions = questions.slice(0, 10);
 const secondRoundQuestions = questions.slice(10, 20);
 let currentRound = 1;
 const isFirstRound = currentRound === 1; 
-const currentQuestions = isFirstRound ? firstRoundQuestions : secondRoundQuestions;
+let currentQuestions = isFirstRound ? firstRoundQuestions : secondRoundQuestions;
 
 function playGame() {
     currentScore = 0;
+    totalAnswers = 0;
+    currentQuestionIndex = 0;
 
-    //select first 10 or last 10 questions
-    currentRound = isFirstRound ? 2 : 1;
-    
-    playGameBtnContainer!.classList.toggle('hidden');
-    questionContainer!.classList.toggle('hidden');
+    currentRound = currentRound === 1 ? 2 : 1;
+    currentQuestions = isFirstRound ? firstRoundQuestions : secondRoundQuestions;
 
-    currentQuestions.sort(() => Math.random() - 0.5);
+    playGameBtnContainer!.classList.add('hidden');
+    questionContainer!.classList.remove('hidden');
 
-    displayQuestion()
-    startTimer()
+    displayQuestion();
+    startTimer();
 }
 
 // -----------------------------------------------------------------------------
@@ -130,13 +130,10 @@ function handleAnswer(event: Event) {
 function endQuiz() {
     stopTimer();
 
-    const sections = document.querySelectorAll('section > *');
     const resultBox = document.querySelector('#resultBox');
 
-    sections.forEach(section => {
-        section!.classList.toggle('hidden');
-    });
-    resultBox!.classList.toggle('hidden');
+    questionContainer!.classList.add('hidden');
+    resultBox!.classList.remove('hidden');
 
     resultBox!.innerHTML = `
     <div class="result-box">
@@ -148,5 +145,8 @@ function endQuiz() {
     `;
 
     const restartBtn = document.querySelector('#restartBtn');
-    restartBtn!.addEventListener('click', playGame);
+    restartBtn!.addEventListener('click', () => {
+        resultBox!.classList.add('hidden');
+        playGame();
+    });
 }
