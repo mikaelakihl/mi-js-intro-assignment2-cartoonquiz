@@ -8,7 +8,7 @@ import { startTimer, stopTimer, timeTaken } from './modules/timer';
 // -----------------------------------------------------------------------------
 const playGameBtn  = document.querySelector('#playGameBtn');
 const logoInHeader = document.querySelector('#logoInHeader');
-// const homePage = document.querySelector('#homePage');
+const HOME_PAGE = 'https://medieinstitutet.github.io/fed24d-js-intro-inl-2-quiz-duble-fun/';
 
 let currentScore = 0;
 
@@ -19,8 +19,8 @@ playGameBtn!.addEventListener('click', playGame);
 
 logoInHeader!.addEventListener('click', goBackToStartPage);
 
-function goBackToStartPage() {
-    window.location.href = '/';
+function goBackToStartPage(){
+    window.location.href = HOME_PAGE;
 }
 
 
