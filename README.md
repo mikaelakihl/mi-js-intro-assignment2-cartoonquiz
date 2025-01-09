@@ -2,10 +2,10 @@
 
 This project was developed as a school group-project at Medieinstitutet. 
 
-The aim was to create a quiz in theme of choice
-We chose to create a quiz about cartoons because it felt fun to play with happy colors   
+The aim was to create a quiz in theme of choice.
+We chose to create a quiz about cartoons because it felt fun to play with happy colors.
 
-Troughtout this project we focused on learning how to work as a group, both individually and pair coding. I hope you enjoy. 
+Troughout this project we focused on learning how to work as a group, both individually and pair coding. I hope you enjoy. 
 
 ## Requirements for this assigment
 
@@ -18,13 +18,14 @@ Troughtout this project we focused on learning how to work as a group, both indi
 * Timer (counting upwards). The timer should stop once all questions have been answered.
 * A confirmation box should display the number of correct answers (out of the total number of questions) and the total time taken.
 * Each person should have made at least two pull requests.
+* Work with the project according to the agile method, SCRUM. 
 
 
 ## Live published site
 
-[Click here for live published version](https://medieinstitutet.github.io/fed24d-js-intro-inl-1-webshop-mikaelakihl/)
+[Click here for live published version](https://medieinstitutet.github.io/fed24d-js-intro-inl-2-quiz-duble-fun/)
 
-**Language: Swedish**
+**Language: English**
 
 
 ## Sneak peak
@@ -59,16 +60,6 @@ Troughtout this project we focused on learning how to work as a group, both indi
 | Primary font | "Coming Soon", serif;  |
 | Secondary font | "Moo Lah Lah", serif; |
 
-## Lessons Learned
-
-Since this was my first project I've learned some lessons of the basics in JavaScript. 
-
-* Keep good structure
-* It matter where you write the code
-* It's better to use global variables 
-* Write psuedocode before you start to code
-
-Writing pseudocode was difficult for me since everything was a new experience, but for the next project I think it will be very helpful.
 ## Validation & a11y
 
 ### HTML
@@ -83,12 +74,12 @@ Writing pseudocode was difficult for me since everything was a new experience, b
 
 ![Se bilden här]()
 
-## Authours
+## Authors
 
 |             |                                                               |
 | ----------------- | ------------------------------------------------------------------ |
 | Mikaela Kihl |  |
-| Mathilda Söderhäll | |
+| Matilda Söderhäll | |
 | Nicole Sjöberg-Silfverling | |
 | Vy Petersson|  |
 | Sokol Hatija|  |
