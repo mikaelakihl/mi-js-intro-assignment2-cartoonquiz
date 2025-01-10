@@ -2,7 +2,6 @@ import './style.scss';
 import questions from './modules/questions';
 import { startTimer, stopTimer, timeTaken } from './modules/timer';
 
-
 // -----------------------------------------------------------------------------
 // --------------------------------- VARIABLES ---------------------------------
 // -----------------------------------------------------------------------------
@@ -19,10 +18,9 @@ playGameBtn!.addEventListener('click', playGame);
 
 logoInHeader!.addEventListener('click', goBackToStartPage);
 
-function goBackToStartPage(){
+function goBackToStartPage() {
     window.location.href = HOME_PAGE;
 }
-
 
 // -----------------------------------------------------------------------------
 // --------------------------------- PLAY GAME ---------------------------------
@@ -50,7 +48,6 @@ function playGame() {
     startTimer();
 
     isFirstRound = !isFirstRound;
-
 }
 
 // -----------------------------------------------------------------------------
@@ -59,7 +56,6 @@ function playGame() {
 const questionBox = document.querySelector('#questionBox');
 const answerBox = document.querySelector('#answerBox');
 let currentQuestionIndex = 0;
-
 
 function displayQuestion() {
     const question = currentQuestions[currentQuestionIndex];
@@ -72,13 +68,11 @@ function displayQuestion() {
     const questionIndexElement = document.querySelector('#questionIndex')!;
     questionIndexElement.textContent = `Question ${currentQuestionIndex + 1}`;
 
-
     questionBox!.innerHTML = `
         <div class="img-container">
          <img src=${question.image?.src} alt=${question.image?.alt} width=${question.image?.width} height=${question.image?.height}>
         </div>
         <h3 class="question">${question.question}</h3>
-    
     `;
 
     answerBox!.innerHTML = answers.map(answer => `

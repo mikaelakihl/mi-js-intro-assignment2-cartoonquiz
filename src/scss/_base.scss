@@ -34,6 +34,7 @@ h1 {
 }
 
 .play-game-btn-container {
+  color: #000000;
   margin: 1rem;
   position: relative;
   display: flex;
@@ -167,6 +168,7 @@ h1 {
 
 .restart-btn {
   cursor: pointer;
+  color: #000000;
   text-transform: uppercase;
   border: none;
   padding: 8px 12px;
@@ -174,6 +176,9 @@ h1 {
   justify-content: center;
   align-items: center;
   font-size: 2rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 // -----------------------------------------------------------------------------
