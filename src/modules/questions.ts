@@ -52,8 +52,7 @@ const questions: IQuestion[] = [
   },
   {
     id: 3,
-    question:
-      "What is the name of Dexter's older sister in 'Dexter's Laboratory'?",
+    question: "What is the name of Dexter's older sister in 'Dexter's Laboratory'?",
     correctAnswer: 'Dee Dee',
     incorrectAnswers: ['Lily', 'Mandy'],
     image: {
@@ -65,8 +64,7 @@ const questions: IQuestion[] = [
   },
   {
     id: 4,
-    question:
-      'What is lost in Hawaiian and is also the name of a little girl in a 2002 film which features a alien named Stitch?',
+    question: 'What is lost in Hawaiian and is also the name of a little girl in a 2002 film which features a alien named Stitch?',
     correctAnswer: 'Lilo',
     incorrectAnswers: ['Lolo', 'Lucy'],
     image: {
@@ -78,8 +76,7 @@ const questions: IQuestion[] = [
   },
   {
     id: 5,
-    question:
-      "Who is the villain in 'The Powerpuff Girls' known for his red skin and sinister demeanor?",
+    question: "Who is the villain in 'The Powerpuff Girls' known for his red skin and sinister demeanor?",
     correctAnswer: 'Him',
     incorrectAnswers: ['Dr. X', 'Professor Utonium'],
     image: {
@@ -91,8 +88,7 @@ const questions: IQuestion[] = [
   },
   {
     id: 6,
-    question:
-      'In Avatar: The Last Airbender, what element does Aang master last?',
+    question: 'In Avatar: The Last Airbender, what element does Aang master last?',
     correctAnswer: 'Fire',
     incorrectAnswers: ['Earth', 'Water'],
     image: {
@@ -116,8 +112,7 @@ const questions: IQuestion[] = [
   },
   {
     id: 8,
-    question:
-      "In Tom and Jerry, who often gets hurt as a result of Tom's antics?",
+    question: "In Tom and Jerry, who often gets hurt as a result of Tom's antics?",
     correctAnswer: 'Tom',
     incorrectAnswers: ['Jerry', 'Spike'],
     image: {
@@ -129,8 +124,7 @@ const questions: IQuestion[] = [
   },
   {
     id: 9,
-    question:
-      "In 'Adventure Time,' who is Finn's best friend and adoptive brother?",
+    question: "In 'Adventure Time,' who is Finn's best friend and adoptive brother?",
     correctAnswer: 'Jake the Dog',
     incorrectAnswers: ['Marceline', 'BMO'],
     image: {
@@ -166,8 +160,7 @@ const questions: IQuestion[] = [
   },
   {
     id: 12,
-    question:
-      "In 'Courage the Cowardly Dog,' where do Courage and his owners live?",
+    question: "In 'Courage the Cowardly Dog,' where do Courage and his owners live?",
     correctAnswer: 'Nowhere',
     incorrectAnswers: ['Somewhere', 'Middle-of-Nowhere'],
     image: {
@@ -227,8 +220,7 @@ const questions: IQuestion[] = [
   },
   {
     id: 17,
-    question:
-      'In The Simpsons, what does Homer often say when something goes wrong?',
+    question: 'In The Simpsons, what does Homer often say when something goes wrong?',
     correctAnswer: "D'oh!",
     incorrectAnswers: ['Woo-hoo!', 'Mmm... donuts!'],
     image: {
@@ -240,8 +232,7 @@ const questions: IQuestion[] = [
   },
   {
     id: 18,
-    question:
-      'In Rick and Morty, what does Rick often use to travel between dimensions?',
+    question: 'In Rick and Morty, what does Rick often use to travel between dimensions?',
     correctAnswer: 'The Portal Gun',
     incorrectAnswers: ['The Time Box', 'The Dimensional Key'],
     image: {

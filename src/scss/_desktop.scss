@@ -1,51 +1,47 @@
 @use 'variables';
 
-@media screen and (min-width: 1280px){
+@media screen and (min-width: 1280px) {
+  body {
+    font-size: variables.$medium-font-size;
+  }
 
-    body{
-        font-size: variables.$medium-font-size;
-    }
-    main{
-        margin: 0 25vw 0 25vw;
-    }
+  main {
+    margin: 0 25vw 0 25vw;
+  }
 
-    // -----------------------------------------------------------------------------
-    // -------------------------------- FIRST PAGE ---------------------------------
-    // -----------------------------------------------------------------------------
-    
-    h1{
-        font-size: 5rem;
-    }
+  // -----------------------------------------------------------------------------
+  // -------------------------------- FIRST PAGE ---------------------------------
+  // -----------------------------------------------------------------------------
+  h1 {
+    font-size: 5rem;
+  }
 
-    .play-game-btn-container{
-    
-        .play-game-btn{
-            font-size: variables.$large-font-size;
-            
-            .play-game-btn-icon{
-                height: 350px;
-                width: 350px;
-            }
-        }
-    }
-    
-    // -----------------------------------------------------------------------------
-    // --------------------------------- QUESTIONS ---------------------------------
-    // -----------------------------------------------------------------------------
-    .timer-display{
-        height: 80px;
-        width: 80px;
-        font-size: 1.5rem;
-    }
+  .play-game-btn-container {
+    .play-game-btn {
+      font-size: variables.$large-font-size;
 
-    .question-box{
-        padding: 20px 100px 20px 100px;
-        font-size: 1.2rem;
+      .play-game-btn-icon {
+        height: 350px;
+        width: 350px;
+      }
     }
+  }
 
-    .answers{
-        font-size: 1.2rem;
-    }
+  // -----------------------------------------------------------------------------
+  // --------------------------------- QUESTIONS ---------------------------------
+  // -----------------------------------------------------------------------------
+  .timer-display {
+    height: 80px;
+    width: 80px;
+    font-size: 1.5rem;
+  }
 
+  .question-box {
+    padding: 20px 100px 20px 100px;
+    font-size: 1.2rem;
+  }
+
+  .answers {
+    font-size: 1.2rem;
+  }
 }
-
