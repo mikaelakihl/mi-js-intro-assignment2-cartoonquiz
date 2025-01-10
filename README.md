@@ -30,7 +30,7 @@ Troughout this project we focused on learning how to work as a group, both indiv
 
 ## Sneak peak
 
-![App Screenshot](screenshots/grottfrid_canvas_shop_sneakpeak.png)
+![App Screenshot](assets/cartoon_quiz_preview.png)
 
 
 ## Tech Stack
@@ -64,15 +64,15 @@ Troughout this project we focused on learning how to work as a group, both indiv
 
 ### HTML
 
-![Se bilden här]()
+![Se bilden här](assets/reports/html_validation.png)
 
 ### CSS 
 
-![Se bilden här]()
+![Se bilden här](assets/reports/css_validation-1.png)
 
 ### Lighthouse Analyze
 
-![Se bilden här]()
+![Se bilden här](assets/reports/lighthouse_report-1.png)
 
 ## Authors
 
