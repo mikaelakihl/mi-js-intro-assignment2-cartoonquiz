@@ -23,7 +23,7 @@ Troughout this project we focused on learning how to work as a group, both indiv
 
 ## Live published site
 
-[Click here for live published version]([https://medieinstitutet.github.io/fed24d-js-intro-inl-2-quiz-duble-fun/](https://mikaelakihl.github.io/mi-js-intro-assignment2-cartoonquiz/))
+[Click here for live published version](https://mikaelakihl.github.io/mi-js-intro-assignment2-cartoonquiz/)
 
 **Language: English**
 
